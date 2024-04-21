@@ -176,6 +176,27 @@ func maxProfit(prices []int) int {
 	return int(profit)
 }
 
+func addBinary(a string, b string) string {
+	i := len(a) - 1
+	j := len(b) - 1
+	res := ""
+	carry := 0
+	for i >= 0 || j >= 0 || carry != 0 {
+		total := carry
+		if i >= 0 {
+			total += int(a[i] - '0')
+			i--
+		}
+		if j >= 0 {
+			total += int(b[j] - '0')
+			j--
+		}
+		res = fmt.Sprintf("%d%s", total%2, res)
+		carry = total / 2
+	}
+	return res
+}
+
 func main() {
 	
 }
