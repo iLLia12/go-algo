@@ -1,13 +1,11 @@
 package largestlocalvaluesinamatrix
 
-
 func max(a int, b int) int {
 	if a < b {
 		return b
 	}
 	return a
 }
-
 
 func largestLocal(grid [][]int) [][]int {
 	var res [][]int
